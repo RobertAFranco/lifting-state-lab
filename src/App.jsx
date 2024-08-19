@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import IngredientList from './components/IngredientList';
 import BurgerStack from './components/BurgerStack';
+import ModeSwitcher from './ModeSwitcher';
 
 export const availableIngredients = [
   { name: 'Kaiser Bun', color: 'saddlebrown' },
@@ -33,6 +34,7 @@ const App = () => {
 
   return (
     <main>
+      <ModeSwitcher />  {/* Render the ModeSwitcher at the top of the page */}
       <h1>Burger Stacker</h1>
       <section>
       <IngredientList className="ingredient-list" ingredients={availableIngredients} addToBurger={addToBurger} />
